@@ -1,0 +1,410 @@
+[2016-03-10 19:21:44,069][DEBUG][org.jboss.logging] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[2016-03-10 19:21:45,456][INFO][luminus.http-server] starting HTTP server on port 3000
+[2016-03-10 19:21:45,960][INFO][org.xnio] XNIO version 3.4.0.Beta1
+[2016-03-10 19:21:46,149][INFO][org.xnio.nio] XNIO NIO Implementation Version 3.4.0.Beta1
+[2016-03-10 19:21:46,270][ERROR][luminus.http-server] server failed to start on port 3000
+java.lang.RuntimeException: java.net.BindException: Address already in use
+	at io.undertow.Undertow.start(Undertow.java:183)
+	at org.projectodd.wunderboss.web.undertow.UndertowWeb.start(UndertowWeb.java:83)
+	at org.projectodd.wunderboss.web.undertow.UndertowWeb.registerHandler(UndertowWeb.java:143)
+	at org.projectodd.wunderboss.web.undertow.UndertowWeb.registerHandler(UndertowWeb.java:124)
+	at org.projectodd.wunderboss.web.undertow.UndertowWeb.registerHandler(UndertowWeb.java:68)
+	at immutant.web.internal.wunderboss$mount.invokeStatic(wunderboss.clj:79)
+	at immutant.web.internal.wunderboss$mount.invoke(wunderboss.clj:56)
+	at immutant.web$run.invokeStatic(web.clj:100)
+	at immutant.web$run.doInvoke(web.clj:23)
+	at clojure.lang.RestFn.invoke(RestFn.java:423)
+	at luminus.http_server$start.invokeStatic(http_server.clj:20)
+	at luminus.http_server$start.invoke(http_server.clj:17)
+	at hero_vs_monster.core$eval13907$fn__13908.invoke(core.clj:19)
+	at mount.core$record_BANG_.invokeStatic(core.cljc:86)
+	at mount.core$record_BANG_.invoke(core.cljc:85)
+	at mount.core$up$fn__100.invoke(core.cljc:93)
+	at mount.core$up.invokeStatic(core.cljc:92)
+	at mount.core$up.invoke(core.cljc:90)
+	at mount.core$bring.invokeStatic(core.cljc:206)
+	at mount.core$bring.invoke(core.cljc:198)
+	at mount.core$start.invokeStatic(core.cljc:246)
+	at mount.core$start.doInvoke(core.cljc:242)
+	at clojure.lang.RestFn.invoke(RestFn.java:397)
+	at mount.core$start_with_args.invokeStatic(core.cljc:312)
+	at mount.core$start_with_args.doInvoke(core.cljc:308)
+	at clojure.lang.RestFn.invoke(RestFn.java:410)
+	at hero_vs_monster.core$start_app.invokeStatic(core.clj:41)
+	at hero_vs_monster.core$start_app.invoke(core.clj:39)
+	at hero_vs_monster.core$_main.invokeStatic(core.clj:50)
+	at hero_vs_monster.core$_main.doInvoke(core.clj:49)
+	at clojure.lang.RestFn.invoke(RestFn.java:397)
+	at clojure.lang.Var.invoke(Var.java:375)
+	at user$eval14022.invokeStatic(form-init455280798718987313.clj:1)
+	at user$eval14022.invoke(form-init455280798718987313.clj:1)
+	at clojure.lang.Compiler.eval(Compiler.java:6927)
+	at clojure.lang.Compiler.eval(Compiler.java:6917)
+	at clojure.lang.Compiler.load(Compiler.java:7379)
+	at clojure.lang.Compiler.loadFile(Compiler.java:7317)
+	at clojure.main$load_script.invokeStatic(main.clj:275)
+	at clojure.main$init_opt.invokeStatic(main.clj:277)
+	at clojure.main$init_opt.invoke(main.clj:277)
+	at clojure.main$initialize.invokeStatic(main.clj:308)
+	at clojure.main$null_opt.invokeStatic(main.clj:342)
+	at clojure.main$null_opt.invoke(main.clj:339)
+	at clojure.main$main.invokeStatic(main.clj:421)
+	at clojure.main$main.doInvoke(main.clj:384)
+	at clojure.lang.RestFn.invoke(RestFn.java:421)
+	at clojure.lang.Var.invoke(Var.java:383)
+	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+	at clojure.lang.Var.applyTo(Var.java:700)
+	at clojure.main.main(main.java:37)
+Caused by: java.net.BindException: Address already in use
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:433)
+	at sun.nio.ch.Net.bind(Net.java:425)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at org.xnio.nio.NioXnioWorker.createTcpConnectionServer(NioXnioWorker.java:180)
+	at org.xnio.XnioWorker.createStreamConnectionServer(XnioWorker.java:243)
+	at io.undertow.Undertow.start(Undertow.java:139)
+	... 50 more
+[2016-03-10 19:22:24,833][DEBUG][org.jboss.logging] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[2016-03-10 19:22:26,104][INFO][luminus.http-server] starting HTTP server on port 3000
+[2016-03-10 19:22:26,574][INFO][org.xnio] XNIO version 3.4.0.Beta1
+[2016-03-10 19:22:26,704][INFO][org.xnio.nio] XNIO NIO Implementation Version 3.4.0.Beta1
+[2016-03-10 19:22:26,808][ERROR][luminus.http-server] server failed to start on port 3000
+java.lang.RuntimeException: java.net.BindException: Address already in use
+	at io.undertow.Undertow.start(Undertow.java:183)
+	at org.projectodd.wunderboss.web.undertow.UndertowWeb.start(UndertowWeb.java:83)
+	at org.projectodd.wunderboss.web.undertow.UndertowWeb.registerHandler(UndertowWeb.java:143)
+	at org.projectodd.wunderboss.web.undertow.UndertowWeb.registerHandler(UndertowWeb.java:124)
+	at org.projectodd.wunderboss.web.undertow.UndertowWeb.registerHandler(UndertowWeb.java:68)
+	at immutant.web.internal.wunderboss$mount.invokeStatic(wunderboss.clj:79)
+	at immutant.web.internal.wunderboss$mount.invoke(wunderboss.clj:56)
+	at immutant.web$run.invokeStatic(web.clj:100)
+	at immutant.web$run.doInvoke(web.clj:23)
+	at clojure.lang.RestFn.invoke(RestFn.java:423)
+	at luminus.http_server$start.invokeStatic(http_server.clj:20)
+	at luminus.http_server$start.invoke(http_server.clj:17)
+	at hero_vs_monster.core$eval13907$fn__13908.invoke(core.clj:19)
+	at mount.core$record_BANG_.invokeStatic(core.cljc:86)
+	at mount.core$record_BANG_.invoke(core.cljc:85)
+	at mount.core$up$fn__100.invoke(core.cljc:93)
+	at mount.core$up.invokeStatic(core.cljc:92)
+	at mount.core$up.invoke(core.cljc:90)
+	at mount.core$bring.invokeStatic(core.cljc:206)
+	at mount.core$bring.invoke(core.cljc:198)
+	at mount.core$start.invokeStatic(core.cljc:246)
+	at mount.core$start.doInvoke(core.cljc:242)
+	at clojure.lang.RestFn.invoke(RestFn.java:397)
+	at mount.core$start_with_args.invokeStatic(core.cljc:312)
+	at mount.core$start_with_args.doInvoke(core.cljc:308)
+	at clojure.lang.RestFn.invoke(RestFn.java:410)
+	at hero_vs_monster.core$start_app.invokeStatic(core.clj:41)
+	at hero_vs_monster.core$start_app.invoke(core.clj:39)
+	at hero_vs_monster.core$_main.invokeStatic(core.clj:50)
+	at hero_vs_monster.core$_main.doInvoke(core.clj:49)
+	at clojure.lang.RestFn.invoke(RestFn.java:397)
+	at clojure.lang.Var.invoke(Var.java:375)
+	at user$eval14022.invokeStatic(form-init1866400446848037333.clj:1)
+	at user$eval14022.invoke(form-init1866400446848037333.clj:1)
+	at clojure.lang.Compiler.eval(Compiler.java:6927)
+	at clojure.lang.Compiler.eval(Compiler.java:6917)
+	at clojure.lang.Compiler.load(Compiler.java:7379)
+	at clojure.lang.Compiler.loadFile(Compiler.java:7317)
+	at clojure.main$load_script.invokeStatic(main.clj:275)
+	at clojure.main$init_opt.invokeStatic(main.clj:277)
+	at clojure.main$init_opt.invoke(main.clj:277)
+	at clojure.main$initialize.invokeStatic(main.clj:308)
+	at clojure.main$null_opt.invokeStatic(main.clj:342)
+	at clojure.main$null_opt.invoke(main.clj:339)
+	at clojure.main$main.invokeStatic(main.clj:421)
+	at clojure.main$main.doInvoke(main.clj:384)
+	at clojure.lang.RestFn.invoke(RestFn.java:421)
+	at clojure.lang.Var.invoke(Var.java:383)
+	at clojure.lang.AFn.applyToHelper(AFn.java:156)
+	at clojure.lang.Var.applyTo(Var.java:700)
+	at clojure.main.main(main.java:37)
+Caused by: java.net.BindException: Address already in use
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:433)
+	at sun.nio.ch.Net.bind(Net.java:425)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at org.xnio.nio.NioXnioWorker.createTcpConnectionServer(NioXnioWorker.java:180)
+	at org.xnio.XnioWorker.createStreamConnectionServer(XnioWorker.java:243)
+	at io.undertow.Undertow.start(Undertow.java:139)
+	... 50 more
+[2016-03-10 19:24:01,674][DEBUG][org.jboss.logging] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[2016-03-10 19:24:03,179][INFO][luminus.http-server] starting HTTP server on port 3000
+[2016-03-10 19:24:03,637][INFO][org.xnio] XNIO version 3.4.0.Beta1
+[2016-03-10 19:24:03,795][INFO][org.xnio.nio] XNIO NIO Implementation Version 3.4.0.Beta1
+[2016-03-10 19:24:03,933][INFO][org.projectodd.wunderboss.web.Web] Registered web context /
+[2016-03-10 19:24:03,936][INFO][luminus.repl-server] starting nREPL server on port 7000
+[2016-03-10 19:24:03,974][INFO][hero-vs-monster.core] #'hero-vs-monster.config/env started
+[2016-03-10 19:24:03,974][INFO][hero-vs-monster.core] #'hero-vs-monster.core/http-server started
+[2016-03-10 19:24:03,974][INFO][hero-vs-monster.core] #'hero-vs-monster.core/repl-server started
+[2016-03-10 19:24:03,975][INFO][hero-vs-monster.env] 
+-=[hero-vs-monster started successfully using the development profile]=-
+[2016-03-10 19:28:36,898][INFO][luminus.repl-server] nREPL server stopped
+[2016-03-10 19:28:36,910][DEBUG][org.projectodd.wunderboss.WunderBoss] Returning existing component for org.projectodd.wunderboss.web.Web:-1645144552, ignoring options.
+[2016-03-10 19:28:36,922][INFO][luminus.http-server] HTTP server stopped
+[2016-03-10 19:28:36,923][INFO][hero-vs-monster.core] #'hero-vs-monster.core/repl-server stopped
+[2016-03-10 19:28:36,923][INFO][hero-vs-monster.core] #'hero-vs-monster.core/http-server stopped
+[2016-03-10 19:28:54,806][DEBUG][org.jboss.logging] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[2016-03-10 19:28:56,120][INFO][luminus.http-server] starting HTTP server on port 3000
+[2016-03-10 19:28:56,590][INFO][org.xnio] XNIO version 3.4.0.Beta1
+[2016-03-10 19:28:56,740][INFO][org.xnio.nio] XNIO NIO Implementation Version 3.4.0.Beta1
+[2016-03-10 19:28:56,874][INFO][org.projectodd.wunderboss.web.Web] Registered web context /
+[2016-03-10 19:28:56,877][INFO][luminus.repl-server] starting nREPL server on port 7000
+[2016-03-10 19:28:56,920][INFO][hero-vs-monster.core] #'hero-vs-monster.config/env started
+[2016-03-10 19:28:56,920][INFO][hero-vs-monster.core] #'hero-vs-monster.core/http-server started
+[2016-03-10 19:28:56,920][INFO][hero-vs-monster.core] #'hero-vs-monster.core/repl-server started
+[2016-03-10 19:28:56,921][INFO][hero-vs-monster.env] 
+-=[hero-vs-monster started successfully using the development profile]=-
+[2016-03-10 19:33:26,455][INFO][luminus.repl-server] nREPL server stopped
+[2016-03-10 19:33:26,473][DEBUG][org.projectodd.wunderboss.WunderBoss] Returning existing component for org.projectodd.wunderboss.web.Web:-1645144552, ignoring options.
+[2016-03-10 19:33:26,499][INFO][luminus.http-server] HTTP server stopped
+[2016-03-10 19:33:26,501][INFO][hero-vs-monster.core] #'hero-vs-monster.core/repl-server stopped
+[2016-03-10 19:33:26,502][INFO][hero-vs-monster.core] #'hero-vs-monster.core/http-server stopped
+[2016-03-10 19:33:49,565][DEBUG][org.jboss.logging] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[2016-03-10 19:33:50,844][INFO][luminus.http-server] starting HTTP server on port 3000
+[2016-03-10 19:33:51,308][INFO][org.xnio] XNIO version 3.4.0.Beta1
+[2016-03-10 19:33:51,434][INFO][org.xnio.nio] XNIO NIO Implementation Version 3.4.0.Beta1
+[2016-03-10 19:33:51,557][INFO][org.projectodd.wunderboss.web.Web] Registered web context /
+[2016-03-10 19:33:51,561][INFO][luminus.repl-server] starting nREPL server on port 7000
+[2016-03-10 19:33:51,601][INFO][hero-vs-monster.core] #'hero-vs-monster.config/env started
+[2016-03-10 19:33:51,602][INFO][hero-vs-monster.core] #'hero-vs-monster.core/http-server started
+[2016-03-10 19:33:51,602][INFO][hero-vs-monster.core] #'hero-vs-monster.core/repl-server started
+[2016-03-10 19:33:51,603][INFO][hero-vs-monster.env] 
+-=[hero-vs-monster started successfully using the development profile]=-
+[2016-03-10 19:35:58,740][INFO][luminus.repl-server] nREPL server stopped
+[2016-03-10 19:35:58,752][DEBUG][org.projectodd.wunderboss.WunderBoss] Returning existing component for org.projectodd.wunderboss.web.Web:-1645144552, ignoring options.
+[2016-03-10 19:35:58,761][INFO][luminus.http-server] HTTP server stopped
+[2016-03-10 19:35:58,764][INFO][hero-vs-monster.core] #'hero-vs-monster.core/repl-server stopped
+[2016-03-10 19:35:58,764][INFO][hero-vs-monster.core] #'hero-vs-monster.core/http-server stopped
+[2016-03-10 19:36:17,278][DEBUG][org.jboss.logging] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[2016-03-10 19:36:18,757][INFO][luminus.http-server] starting HTTP server on port 3000
+[2016-03-10 19:36:19,347][INFO][org.xnio] XNIO version 3.4.0.Beta1
+[2016-03-10 19:36:19,466][INFO][org.xnio.nio] XNIO NIO Implementation Version 3.4.0.Beta1
+[2016-03-10 19:36:19,578][INFO][org.projectodd.wunderboss.web.Web] Registered web context /
+[2016-03-10 19:36:19,580][INFO][luminus.repl-server] starting nREPL server on port 7000
+[2016-03-10 19:36:19,616][INFO][hero-vs-monster.core] #'hero-vs-monster.config/env started
+[2016-03-10 19:36:19,616][INFO][hero-vs-monster.core] #'hero-vs-monster.core/http-server started
+[2016-03-10 19:36:19,616][INFO][hero-vs-monster.core] #'hero-vs-monster.core/repl-server started
+[2016-03-10 19:36:19,617][INFO][hero-vs-monster.env] 
+-=[hero-vs-monster started successfully using the development profile]=-
+[2016-03-10 19:41:50,619][INFO][luminus.repl-server] nREPL server stopped
+[2016-03-10 19:41:50,628][DEBUG][org.projectodd.wunderboss.WunderBoss] Returning existing component for org.projectodd.wunderboss.web.Web:-1645144552, ignoring options.
+[2016-03-10 19:41:50,642][INFO][luminus.http-server] HTTP server stopped
+[2016-03-10 19:41:50,643][INFO][hero-vs-monster.core] #'hero-vs-monster.core/repl-server stopped
+[2016-03-10 19:41:50,644][INFO][hero-vs-monster.core] #'hero-vs-monster.core/http-server stopped
+[2016-03-10 19:42:09,867][DEBUG][org.jboss.logging] Logging Provider: org.jboss.logging.Log4jLoggerProvider
+[2016-03-10 19:42:11,254][INFO][luminus.http-server] starting HTTP server on port 3000
+[2016-03-10 19:42:11,780][INFO][org.xnio] XNIO version 3.4.0.Beta1
+[2016-03-10 19:42:11,918][INFO][org.xnio.nio] XNIO NIO Implementation Version 3.4.0.Beta1
+[2016-03-10 19:42:12,078][INFO][org.projectodd.wunderboss.web.Web] Registered web context /
+[2016-03-10 19:42:12,081][INFO][luminus.repl-server] starting nREPL server on port 7000
+[2016-03-10 19:42:12,126][INFO][hero-vs-monster.core] #'hero-vs-monster.config/env started
+[2016-03-10 19:42:12,127][INFO][hero-vs-monster.core] #'hero-vs-monster.core/http-server started
+[2016-03-10 19:42:12,127][INFO][hero-vs-monster.core] #'hero-vs-monster.core/repl-server started
+[2016-03-10 19:42:12,130][INFO][hero-vs-monster.env] 
+-=[hero-vs-monster started successfully using the development profile]=-
+[2016-03-10 19:58:32,141][DEBUG][org.projectodd.wunderboss.WunderBoss] Returning existing component for org.projectodd.wunderboss.web.Web:-1645144552, ignoring options.
+[2016-03-10 19:58:32,166][ERROR][org.xnio.listener] XNIO001007: A channel event listener threw an exception
+java.util.concurrent.RejectedExecutionException: XNIO007007: Thread is terminating
+	at org.xnio.nio.WorkerThread.executeAfter(WorkerThread.java:601)
+	at io.undertow.util.DateUtils.addDateHeaderIfRequired(DateUtils.java:247)
+	at io.undertow.server.protocol.http.HttpTransferEncoding.createSinkConduit(HttpTransferEncoding.java:203)
+	at io.undertow.server.protocol.http.HttpServerConnection.getSinkConduit(HttpServerConnection.java:205)
+	at io.undertow.server.HttpServerExchange.getResponseChannel(HttpServerExchange.java:1234)
+	at io.undertow.io.UndertowOutputStream.close(UndertowOutputStream.java:337)
+	at io.undertow.server.HttpServerExchange$DefaultBlockingHttpExchange.close(HttpServerExchange.java:1768)
+	at io.undertow.server.HttpServerExchange.endExchange(HttpServerExchange.java:1487)
+	at io.undertow.server.AbstractServerConnection$CloseSetter.handleEvent(AbstractServerConnection.java:304)
+	at io.undertow.server.AbstractServerConnection$CloseSetter.handleEvent(AbstractServerConnection.java:284)
+	at org.xnio.ChannelListeners.invokeChannelListener(ChannelListeners.java:92)
+	at org.xnio.StreamConnection.invokeCloseListener(StreamConnection.java:80)
+	at org.xnio.Connection.writeClosed(Connection.java:117)
+	at org.xnio.nio.AbstractNioStreamConnection.writeClosed(AbstractNioStreamConnection.java:47)
+	at org.xnio.nio.NioSocketConduit.terminateWrites(NioSocketConduit.java:182)
+	at org.xnio.nio.NioSocketConduit.truncateWrites(NioSocketConduit.java:196)
+	at org.xnio.conduits.ConduitStreamSinkChannel.close(ConduitStreamSinkChannel.java:186)
+	at org.xnio.IoUtils.safeClose(IoUtils.java:152)
+	at org.xnio.conduits.WriteReadyHandler$ChannelListenerHandler.forceTermination(WriteReadyHandler.java:57)
+	at org.xnio.nio.NioSocketConduit.forceTermination(NioSocketConduit.java:108)
+	at org.xnio.nio.WorkerThread.run(WorkerThread.java:492)
+[2016-03-10 19:58:32,227][INFO][luminus.http-server] HTTP server stopped
+[2016-03-10 19:58:32,232][INFO][luminus.http-server] starting HTTP server on port 3000
+[2016-03-10 19:58:32,234][DEBUG][org.projectodd.wunderboss.WunderBoss] Returning existing component for org.projectodd.wunderboss.web.Web:-1645144552, ignoring options.
+[2016-03-10 19:58:32,242][INFO][org.projectodd.wunderboss.web.Web] Registered web context /
+[2016-03-10 19:58:32,267][INFO][luminus.repl-server] nREPL server stopped
+[2016-03-10 19:58:32,268][INFO][luminus.repl-server] starting nREPL server on port 7000
+[2016-03-10 19:58:32,321][ERROR][io.undertow.request] Undertow request failed HttpServerExchange{ GET /hvm request {Accept=[text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8], Accept-Language=[en-US,en;q=0.8], Cache-Control=[max-age=0], Accept-Encoding=[gzip, deflate, sdch], User-Agent=[Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36], Connection=[keep-alive], Cookie=[JSESSIONID=gnlLPtVfjU-xcG5Cu291JkEx7pIKcJHnZPlesFH9], Upgrade-Insecure-Requests=[1], Host=[localhost:3000]} response {Server=[undertow], X-XSS-Protection=[1; mode=block], X-Content-Type-Options=[nosniff], X-Frame-Options=[SAMEORIGIN], Content-Length=[0], Content-Type=[text/html; charset=utf-8]}}
+java.io.IOException: UT000034: Stream is closed
+	at io.undertow.io.UndertowOutputStream.write(UndertowOutputStream.java:116)
+	at io.undertow.io.UndertowOutputStream.write(UndertowOutputStream.java:102)
+	at immutant.web.internal.ring$eval8362$fn__8363.invoke(ring.clj:131)
+	at clojure.lang.MultiFn.invoke(MultiFn.java:238)
+	at immutant.web.internal.undertow$eval12487$fn__12525$action__12526.invoke(undertow.clj:159)
+	at immutant.web.internal.undertow$eval12487$fn__12525.invoke(undertow.clj:172)
+	at immutant.web.internal.ring$eval8280$fn__8303$G__8269__8314.invoke(ring.clj:106)
+	at immutant.web.internal.ring$write_response.invokeStatic(ring.clj:149)
+	at immutant.web.internal.ring$write_response.invoke(ring.clj:142)
+	at immutant.web.internal.undertow$create_http_handler$reify__12565.handleRequest(undertow.clj:239)
+	at org.projectodd.wunderboss.web.undertow.async.websocket.UndertowWebsocket$2.handleRequest(UndertowWebsocket.java:104)
+	at io.undertow.server.session.SessionAttachmentHandler.handleRequest(SessionAttachmentHandler.java:68)
+	at io.undertow.server.Connectors.executeRootHandler(Connectors.java:199)
+	at io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:778)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-03-10 20:00:33,527][DEBUG][org.projectodd.wunderboss.WunderBoss] Returning existing component for org.projectodd.wunderboss.web.Web:-1645144552, ignoring options.
+[2016-03-10 20:00:33,530][DEBUG][io.undertow.request.io] UT005013: An IOException occurred
+java.nio.channels.ClosedChannelException
+	at io.undertow.server.protocol.http.HttpResponseConduit.processWrite(HttpResponseConduit.java:117)
+	at io.undertow.server.protocol.http.HttpResponseConduit.flush(HttpResponseConduit.java:687)
+	at io.undertow.conduits.AbstractFixedLengthStreamSinkConduit.flush(AbstractFixedLengthStreamSinkConduit.java:229)
+	at org.xnio.conduits.ConduitStreamSinkChannel.flush(ConduitStreamSinkChannel.java:162)
+	at io.undertow.channels.DetachableStreamSinkChannel.flush(DetachableStreamSinkChannel.java:119)
+	at org.xnio.channels.Channels.flushBlocking(Channels.java:63)
+	at io.undertow.io.UndertowOutputStream.close(UndertowOutputStream.java:344)
+	at io.undertow.server.HttpServerExchange$DefaultBlockingHttpExchange.close(HttpServerExchange.java:1768)
+	at io.undertow.server.HttpServerExchange.endExchange(HttpServerExchange.java:1487)
+	at io.undertow.server.AbstractServerConnection$CloseSetter.handleEvent(AbstractServerConnection.java:304)
+	at io.undertow.server.AbstractServerConnection$CloseSetter.handleEvent(AbstractServerConnection.java:284)
+	at org.xnio.ChannelListeners.invokeChannelListener(ChannelListeners.java:92)
+	at org.xnio.StreamConnection.invokeCloseListener(StreamConnection.java:80)
+	at org.xnio.Connection.writeClosed(Connection.java:117)
+	at org.xnio.nio.AbstractNioStreamConnection.writeClosed(AbstractNioStreamConnection.java:47)
+	at org.xnio.nio.NioSocketConduit.terminateWrites(NioSocketConduit.java:182)
+	at org.xnio.nio.NioSocketConduit.truncateWrites(NioSocketConduit.java:196)
+	at org.xnio.conduits.ConduitStreamSinkChannel.close(ConduitStreamSinkChannel.java:186)
+	at org.xnio.IoUtils.safeClose(IoUtils.java:152)
+	at org.xnio.conduits.WriteReadyHandler$ChannelListenerHandler.forceTermination(WriteReadyHandler.java:57)
+	at org.xnio.nio.NioSocketConduit.forceTermination(NioSocketConduit.java:108)
+	at org.xnio.nio.WorkerThread.run(WorkerThread.java:492)
+[2016-03-10 20:00:33,581][INFO][luminus.http-server] HTTP server stopped
+[2016-03-10 20:00:33,583][INFO][luminus.http-server] starting HTTP server on port 3000
+[2016-03-10 20:00:33,585][DEBUG][org.projectodd.wunderboss.WunderBoss] Returning existing component for org.projectodd.wunderboss.web.Web:-1645144552, ignoring options.
+[2016-03-10 20:00:33,637][INFO][org.projectodd.wunderboss.web.Web] Registered web context /
+[2016-03-10 20:00:33,649][INFO][luminus.repl-server] nREPL server stopped
+[2016-03-10 20:00:33,651][INFO][luminus.repl-server] starting nREPL server on port 7000
+[2016-03-10 20:00:34,544][ERROR][io.undertow.request] Undertow request failed HttpServerExchange{ GET /fight request {Accept=[text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8], Accept-Language=[en-US,en;q=0.8], Cache-Control=[max-age=0], Accept-Encoding=[gzip, deflate, sdch], User-Agent=[Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36], Connection=[keep-alive], Cookie=[JSESSIONID=gnlLPtVfjU-xcG5Cu291JkEx7pIKcJHnZPlesFH9], Upgrade-Insecure-Requests=[1], Host=[localhost:3000]} response {Connection=[keep-alive], Server=[undertow], Content-Length=[0], Date=[Fri, 11 Mar 2016 00:58:32 GMT]}}
+java.lang.IllegalStateException: UT000002: The response has already been started
+	at io.undertow.server.HttpServerExchange.setResponseCode(HttpServerExchange.java:1289)
+	at immutant.web.internal.undertow$eval12487$fn__12518.invoke(undertow.clj:149)
+	at immutant.web.internal.ring$eval8280$fn__8320$G__8267__8327.invoke(ring.clj:106)
+	at immutant.web.internal.undertow$eval12487$fn__12525$action__12526.invoke(undertow.clj:157)
+	at immutant.web.internal.undertow$eval12487$fn__12525.invoke(undertow.clj:172)
+	at immutant.web.internal.ring$eval8280$fn__8303$G__8269__8314.invoke(ring.clj:106)
+	at immutant.web.internal.ring$write_response.invokeStatic(ring.clj:149)
+	at immutant.web.internal.ring$write_response.invoke(ring.clj:142)
+	at immutant.web.internal.undertow$create_http_handler$reify__12565.handleRequest(undertow.clj:239)
+	at org.projectodd.wunderboss.web.undertow.async.websocket.UndertowWebsocket$2.handleRequest(UndertowWebsocket.java:104)
+	at io.undertow.server.session.SessionAttachmentHandler.handleRequest(SessionAttachmentHandler.java:68)
+	at io.undertow.server.Connectors.executeRootHandler(Connectors.java:199)
+	at io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:778)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-03-10 20:01:15,023][DEBUG][org.projectodd.wunderboss.WunderBoss] Returning existing component for org.projectodd.wunderboss.web.Web:-1645144552, ignoring options.
+[2016-03-10 20:01:15,025][INFO][luminus.http-server] HTTP server stopped
+[2016-03-10 20:01:15,026][INFO][luminus.http-server] starting HTTP server on port 3000
+[2016-03-10 20:01:15,027][DEBUG][org.projectodd.wunderboss.WunderBoss] Returning existing component for org.projectodd.wunderboss.web.Web:-1645144552, ignoring options.
+[2016-03-10 20:01:15,025][DEBUG][io.undertow.request.io] UT005013: An IOException occurred
+java.nio.channels.ClosedChannelException
+	at io.undertow.server.protocol.http.HttpResponseConduit.processWrite(HttpResponseConduit.java:117)
+	at io.undertow.server.protocol.http.HttpResponseConduit.flush(HttpResponseConduit.java:687)
+	at io.undertow.conduits.AbstractFixedLengthStreamSinkConduit.flush(AbstractFixedLengthStreamSinkConduit.java:229)
+	at org.xnio.conduits.ConduitStreamSinkChannel.flush(ConduitStreamSinkChannel.java:162)
+	at io.undertow.channels.DetachableStreamSinkChannel.flush(DetachableStreamSinkChannel.java:119)
+	at org.xnio.channels.Channels.flushBlocking(Channels.java:63)
+	at io.undertow.io.UndertowOutputStream.close(UndertowOutputStream.java:344)
+	at io.undertow.server.HttpServerExchange$DefaultBlockingHttpExchange.close(HttpServerExchange.java:1768)
+	at io.undertow.server.HttpServerExchange.endExchange(HttpServerExchange.java:1487)
+	at io.undertow.server.AbstractServerConnection$CloseSetter.handleEvent(AbstractServerConnection.java:304)
+	at io.undertow.server.AbstractServerConnection$CloseSetter.handleEvent(AbstractServerConnection.java:284)
+	at org.xnio.ChannelListeners.invokeChannelListener(ChannelListeners.java:92)
+	at org.xnio.StreamConnection.invokeCloseListener(StreamConnection.java:80)
+	at org.xnio.Connection.writeClosed(Connection.java:117)
+	at org.xnio.nio.AbstractNioStreamConnection.writeClosed(AbstractNioStreamConnection.java:47)
+	at org.xnio.nio.NioSocketConduit.terminateWrites(NioSocketConduit.java:182)
+	at org.xnio.nio.NioSocketConduit.truncateWrites(NioSocketConduit.java:196)
+	at org.xnio.conduits.ConduitStreamSinkChannel.close(ConduitStreamSinkChannel.java:186)
+	at org.xnio.IoUtils.safeClose(IoUtils.java:152)
+	at org.xnio.conduits.WriteReadyHandler$ChannelListenerHandler.forceTermination(WriteReadyHandler.java:57)
+	at org.xnio.nio.NioSocketConduit.forceTermination(NioSocketConduit.java:108)
+	at org.xnio.nio.WorkerThread.run(WorkerThread.java:492)
+[2016-03-10 20:01:15,039][INFO][org.projectodd.wunderboss.web.Web] Registered web context /
+[2016-03-10 20:01:15,074][INFO][luminus.repl-server] nREPL server stopped
+[2016-03-10 20:01:15,075][INFO][luminus.repl-server] starting nREPL server on port 7000
+[2016-03-10 20:01:15,103][ERROR][io.undertow.request] Undertow request failed HttpServerExchange{ GET /fight request {Accept=[text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8], Accept-Language=[en-US,en;q=0.8], Accept-Encoding=[gzip, deflate, sdch], User-Agent=[Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36], Connection=[keep-alive], Cookie=[JSESSIONID=gnlLPtVfjU-xcG5Cu291JkEx7pIKcJHnZPlesFH9], Referer=[http://localhost:3000/hvm], Upgrade-Insecure-Requests=[1], Host=[localhost:3000]} response {Connection=[keep-alive], Server=[undertow], Content-Length=[0], Date=[Fri, 11 Mar 2016 00:58:32 GMT]}}
+java.lang.IllegalStateException: UT000002: The response has already been started
+	at io.undertow.server.HttpServerExchange.setResponseCode(HttpServerExchange.java:1289)
+	at immutant.web.internal.undertow$eval12487$fn__12518.invoke(undertow.clj:149)
+	at immutant.web.internal.ring$eval8280$fn__8320$G__8267__8327.invoke(ring.clj:106)
+	at immutant.web.internal.undertow$eval12487$fn__12525$action__12526.invoke(undertow.clj:157)
+	at immutant.web.internal.undertow$eval12487$fn__12525.invoke(undertow.clj:172)
+	at immutant.web.internal.ring$eval8280$fn__8303$G__8269__8314.invoke(ring.clj:106)
+	at immutant.web.internal.ring$write_response.invokeStatic(ring.clj:149)
+	at immutant.web.internal.ring$write_response.invoke(ring.clj:142)
+	at immutant.web.internal.undertow$create_http_handler$reify__12565.handleRequest(undertow.clj:239)
+	at org.projectodd.wunderboss.web.undertow.async.websocket.UndertowWebsocket$2.handleRequest(UndertowWebsocket.java:104)
+	at io.undertow.server.session.SessionAttachmentHandler.handleRequest(SessionAttachmentHandler.java:68)
+	at io.undertow.server.Connectors.executeRootHandler(Connectors.java:199)
+	at io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:778)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-03-10 20:02:04,968][DEBUG][org.projectodd.wunderboss.WunderBoss] Returning existing component for org.projectodd.wunderboss.web.Web:-1645144552, ignoring options.
+[2016-03-10 20:02:04,970][INFO][luminus.http-server] HTTP server stopped
+[2016-03-10 20:02:04,970][DEBUG][io.undertow.request.io] UT005013: An IOException occurred
+java.nio.channels.ClosedChannelException
+	at io.undertow.server.protocol.http.HttpResponseConduit.processWrite(HttpResponseConduit.java:117)
+	at io.undertow.server.protocol.http.HttpResponseConduit.flush(HttpResponseConduit.java:687)
+	at io.undertow.conduits.AbstractFixedLengthStreamSinkConduit.flush(AbstractFixedLengthStreamSinkConduit.java:229)
+	at org.xnio.conduits.ConduitStreamSinkChannel.flush(ConduitStreamSinkChannel.java:162)
+	at io.undertow.channels.DetachableStreamSinkChannel.flush(DetachableStreamSinkChannel.java:119)
+	at org.xnio.channels.Channels.flushBlocking(Channels.java:63)
+	at io.undertow.io.UndertowOutputStream.close(UndertowOutputStream.java:344)
+	at io.undertow.server.HttpServerExchange$DefaultBlockingHttpExchange.close(HttpServerExchange.java:1768)
+	at io.undertow.server.HttpServerExchange.endExchange(HttpServerExchange.java:1487)
+	at io.undertow.server.AbstractServerConnection$CloseSetter.handleEvent(AbstractServerConnection.java:304)
+	at io.undertow.server.AbstractServerConnection$CloseSetter.handleEvent(AbstractServerConnection.java:284)
+	at org.xnio.ChannelListeners.invokeChannelListener(ChannelListeners.java:92)
+	at org.xnio.StreamConnection.invokeCloseListener(StreamConnection.java:80)
+	at org.xnio.Connection.writeClosed(Connection.java:117)
+	at org.xnio.nio.AbstractNioStreamConnection.writeClosed(AbstractNioStreamConnection.java:47)
+	at org.xnio.nio.NioSocketConduit.terminateWrites(NioSocketConduit.java:182)
+	at org.xnio.nio.NioSocketConduit.truncateWrites(NioSocketConduit.java:196)
+	at org.xnio.conduits.ConduitStreamSinkChannel.close(ConduitStreamSinkChannel.java:186)
+	at org.xnio.IoUtils.safeClose(IoUtils.java:152)
+	at org.xnio.conduits.WriteReadyHandler$ChannelListenerHandler.forceTermination(WriteReadyHandler.java:57)
+	at org.xnio.nio.NioSocketConduit.forceTermination(NioSocketConduit.java:108)
+	at org.xnio.nio.WorkerThread.run(WorkerThread.java:492)
+[2016-03-10 20:02:04,971][INFO][luminus.http-server] starting HTTP server on port 3000
+[2016-03-10 20:02:05,006][DEBUG][org.projectodd.wunderboss.WunderBoss] Returning existing component for org.projectodd.wunderboss.web.Web:-1645144552, ignoring options.
+[2016-03-10 20:02:05,024][INFO][org.projectodd.wunderboss.web.Web] Registered web context /
+[2016-03-10 20:02:05,071][INFO][luminus.repl-server] nREPL server stopped
+[2016-03-10 20:02:05,073][INFO][luminus.repl-server] starting nREPL server on port 7000
+[2016-03-10 20:02:05,125][ERROR][io.undertow.request] Undertow request failed HttpServerExchange{ GET /fight request {Accept=[text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8], Accept-Language=[en-US,en;q=0.8], Cache-Control=[max-age=0], Accept-Encoding=[gzip, deflate, sdch], User-Agent=[Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36], Connection=[keep-alive], Cookie=[JSESSIONID=gnlLPtVfjU-xcG5Cu291JkEx7pIKcJHnZPlesFH9], Referer=[http://localhost:3000/hvm], Upgrade-Insecure-Requests=[1], Host=[localhost:3000]} response {Connection=[keep-alive], Server=[undertow], Content-Length=[0], Date=[Fri, 11 Mar 2016 00:58:32 GMT]}}
+java.lang.IllegalStateException: UT000002: The response has already been started
+	at io.undertow.server.HttpServerExchange.setResponseCode(HttpServerExchange.java:1289)
+	at immutant.web.internal.undertow$eval12487$fn__12518.invoke(undertow.clj:149)
+	at immutant.web.internal.ring$eval8280$fn__8320$G__8267__8327.invoke(ring.clj:106)
+	at immutant.web.internal.undertow$eval12487$fn__12525$action__12526.invoke(undertow.clj:157)
+	at immutant.web.internal.undertow$eval12487$fn__12525.invoke(undertow.clj:172)
+	at immutant.web.internal.ring$eval8280$fn__8303$G__8269__8314.invoke(ring.clj:106)
+	at immutant.web.internal.ring$write_response.invokeStatic(ring.clj:149)
+	at immutant.web.internal.ring$write_response.invoke(ring.clj:142)
+	at immutant.web.internal.undertow$create_http_handler$reify__12565.handleRequest(undertow.clj:239)
+	at org.projectodd.wunderboss.web.undertow.async.websocket.UndertowWebsocket$2.handleRequest(UndertowWebsocket.java:104)
+	at io.undertow.server.session.SessionAttachmentHandler.handleRequest(SessionAttachmentHandler.java:68)
+	at io.undertow.server.Connectors.executeRootHandler(Connectors.java:199)
+	at io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:778)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[2016-03-10 20:03:36,222][INFO][luminus.repl-server] nREPL server stopped
+[2016-03-10 20:03:36,224][DEBUG][org.projectodd.wunderboss.WunderBoss] Returning existing component for org.projectodd.wunderboss.web.Web:-1645144552, ignoring options.
+[2016-03-10 20:03:36,231][INFO][luminus.http-server] HTTP server stopped
+[2016-03-10 20:03:36,232][INFO][hero-vs-monster.core] #'hero-vs-monster.core/repl-server stopped
+[2016-03-10 20:03:36,235][INFO][hero-vs-monster.core] #'hero-vs-monster.core/http-server stopped
