@@ -2,7 +2,9 @@
   (:require [hero-vs-monster.layout :as layout]
             [compojure.core :refer [defroutes GET]]
             [ring.util.http-response :as response]
-            [clojure.java.io :as io]))
+            [clojure.java.io :as io]
+            [clj-http.client :as client]
+            [clojure.data.json :as json]))
 
 (defn speech1 [hero]
   (println (str (hero :name)
@@ -10,7 +12,11 @@
                 (hero :weapon)
                 "!")))
 
-(def monstertypes ["ogre" "troll" "blastended skrewt"])
+(defn randitem [vec] (vec (rand-int (count vec))))
+
+(def monstertypes ["ogre" "troll" "blastendedskrewt"])
+
+(def adjs ["brave" "stinky" "cowardly" "magnifacent" "gud ot cpaling" "fat" "lazy" "weird😝"])
 
 (defn mkhero [name weapon] {:name name
                             :weapon weapon
@@ -19,7 +25,11 @@
 
 (defn mkmonster [] {:strength (+ 1(rand-int 60))
                     :hp 5
-                    :type (get monstertypes (rand-int 4))})
+                    :type (randitem monstertypes)})
+
+(defn getgiphy [tag] (get-in (json/read-str((client/get
+                       (str "http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&rating=pg&tag=" tag))
+                      :body)) ["data" "image_url"]))
 
 (defn fight [hero monster] (if
                              (> (hero :strength) (monster :strength))
@@ -38,5 +48,15 @@
   ;(GET "/" [] (home-page))
   (GET "/about" [] (about-page))
   (GET "/" [] (layout/render "hvm.html"))
-  (GET "/fight" [heroname heroweapon] (fight (mkhero heroname heroweapon) (mkmonster))))
+  (GET "/fight" [heroname heroweapon] (do
+                                        (def monster (mkmonster))
+                                        (layout/render "fight.html"
+                                                     {:results (fight (mkhero heroname heroweapon) monster)
+                                                      :heroname heroname
+                                                      :monstertype (monster :type)
+                                                      :heroadj (randitem adjs)
+                                                      :monsteradj (randitem adjs)
+                                                      :heroimage (getgiphy "hero")
+                                                      :monsterimage (getgiphy (monster :type))
+                                                      }))))
 

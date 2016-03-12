@@ -25,7 +25,9 @@
                  [luminus-nrepl "0.1.4"]
                  [org.webjars/webjars-locator-jboss-vfs "0.1.0"]
                  [luminus-immutant "0.1.9"]
-                 [luminus-log4j "0.1.3"]]
+                 [luminus-log4j "0.1.3"]
+                 [clj-http "2.1.0"]
+                 [org.clojure/data.json "0.2.6"]]
 
   :min-lein-version "2.0.0"
 
@@ -39,7 +41,7 @@
   :target-path "target/%s/"
   :profiles
   {:uberjar {:omit-source true
-             
+
              :aot :all
              :uberjar-name "hero-vs-monster.jar"
              :source-paths ["env/prod/clj"]
@@ -50,8 +52,8 @@
                                  [ring/ring-mock "0.3.0"]
                                  [ring/ring-devel "1.4.0"]
                                  [pjstadig/humane-test-output "0.7.1"]]
-                  
-                  
+
+
                   :source-paths ["env/dev/clj" "test/clj"]
                   :resource-paths ["env/dev/resources"]
                   :repl-options {:init-ns user}
