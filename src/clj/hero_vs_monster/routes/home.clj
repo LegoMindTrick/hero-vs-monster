@@ -14,9 +14,9 @@
 
 (defn randitem [vec] (vec (rand-int (count vec))))
 
-(def monstertypes ["ogre" "troll" "blastendedskrewt"])
+(def monstertypes ["ogre" "troll" "skrewt" "dragon" "lizard"])
 
-(def adjs ["brave" "stinky" "cowardly" "magnifacent" "gud ot cpaling" "fat" "lazy" "weird😝"])
+(def adjs ["brave" "stinky" "cowardly" "magnifacent" "cool" "fat" "lazy" "weird"])
 
 (defn mkhero [name weapon] {:name name
                             :weapon weapon
@@ -50,13 +50,15 @@
   (GET "/" [] (layout/render "hvm.html"))
   (GET "/fight" [heroname heroweapon] (do
                                         (def monster (mkmonster))
+                                        (def monsteradj (randitem adjs))
+                                        (def heroadj (randitem adjs))
                                         (layout/render "fight.html"
                                                      {:results (fight (mkhero heroname heroweapon) monster)
                                                       :heroname heroname
                                                       :monstertype (monster :type)
-                                                      :heroadj (randitem adjs)
-                                                      :monsteradj (randitem adjs)
-                                                      :heroimage (getgiphy "hero")
+                                                      :heroadj heroadj
+                                                      :monsteradj monsteradj
+                                                      :heroimage (getgiphy heroadj)
                                                       :monsterimage (getgiphy (monster :type))
                                                       }))))
 
